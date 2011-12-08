@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>StatMe</title>
+<link href="css/jquery.mobile.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8"src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8"src="js/jquery.mobile.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/login.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/allCategories.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/allThreads.js"></script>
+<script>
+	var idUser;
+	$(document).ready(function(){
+		//$(document).bind("deviceready", function(){
+			$('#login .submiter').click(function(){
+				login();
+			});
+			allCategories();
+		//});
+	});
+</script>
+</head>
+<body >
+	<div data-role="page" id="pageLogin">
+	    <div data-role="header">
+	        <h2>Login</h2>
+	    </div>
+	    <div data-role="content">
+	       <form id="login">
+		       	<label for="email">Email</label>
+		       	<input type="text" name="email" value="" />
+		       	<label for="password">Password</label>
+		       	<input type="password" name="password" value=""  />
+				<button type="button" class="submiter" data-theme="b">Submit</button>
+			</form>
+		</div>
+	</div>
+	<div data-role="page" id="pageMenu">
+	    <div data-role="header">
+	        <h2>Menu</h2>
+	    </div>
+	    <div data-role="content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a" style="text-align:center;margin-bottom:20px;">
+					<div><a href="#pageMyCategories"><img src="images/ico_my.png"/></a></div>
+					<div><a href="#pageMyCategories">Mes Fils</a></div>
+				</div>
+				<div class="ui-block-b" style="text-align:center;margin-bottom:20px;">
+					<div><a href="#pageAllCategories"><img src="images/ico_all.png"/></a></div>
+					<div><a href="#pageAllCategories">Tous les fils</a></div>
+				</div>
+				<div class="ui-block-a" style="text-align:center;margin-bottom:20px;">
+					<div><a href="#pageMyFriends"><img src="images/ico_friends.png"/></a></div>
+					<div><a href="#pageMyFriends">Amis</a></div>
+				</div>
+				<div class="ui-block-b" style="text-align:center;margin-bottom:20px;">
+					<div><a href="#pageConfiguration"><img src="images/ico_settings.png"/></a></div>
+					<div><a href="#pageConfiguration">Configuration</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="pageAllCategories" data-add-back-btn="true">
+	    <div data-role="header">
+	        <h2>All Categories</h2>
+	    </div>
+	    <div data-role="content" id="contentAllCategories">
+		
+		</div>
+	</div>
+	<div data-role="page" id="pageAllThreads" data-add-back-btn="true">
+	    <div data-role="header">
+	        <h2>All Threads</h2>
+	    </div>
+	    <div data-role="content" id="contentAllThreads">
+		
+		</div>
+	</div>
+	<div data-role="page" id="pageMyCategories" data-add-back-btn="true">
+	    <div data-role="header">
+	        <h2>My Categories</h2>
+	    </div>
+	    <div data-role="content" id="contentMyCategories">
+	    
+		</div>
+	</div>
+	<div data-role="page" id="pageMyFriends" data-add-back-btn="true">
+	    <div data-role="header">
+	        <h2>Friends</h2>
+	    </div>
+	    <div data-role="content" id="contentMyFriends">
+		
+		</div>
+	</div>
+	<div data-role="page" id="pageConfiguration" data-add-back-btn="true">
+	    <div data-role="header">
+	        <h2>Configuration</h2>
+	    </div>
+	    <div data-role="content" id="contentConfiguration">
+			
+		</div>
+	</div>
+</body>
+</html>
