@@ -1,0 +1,8 @@
+@CHARSET "ISO-8859-1";
+.tdFooterMyFriendsCommentDisplayFalse{
+	display:none;
+}
+
+.tdFooterMyFriendsCommentDisplayTrue{
+	display:block;
+}
