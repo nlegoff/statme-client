@@ -1,0 +1,14 @@
+statme_client-Info.plist
+*.mode1v3
+*.perspectivev3
+*.pbxuser
+.DS_Store
+build
+Classes
+Plugins
+Resources
+main.m
+statme-client.xcodeproj
+statme_client-Prefix.pch
+PhoneGapBuildSettings.xcconfig
+PhoneGap.plist
