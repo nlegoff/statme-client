@@ -12,6 +12,14 @@
   margin:0;
 }
 
+#page-login input{
+  width:99%;
+}
+
+#page-login button{
+  width:100%;
+}
+
 #statme-mask{
   position:absolute;
   left:0px;

@@ -18,53 +18,61 @@
     <script type="text/javascript" src="js/statme/api.js"></script>
 
     <script>
-      $(document).ready(function(){
-        var scope = $("#page-login");
+      jQuery(document).ready(function(){
+        var scope = jQuery("#page-login");
 
-        $("#login-button", scope).unbind("click").click(function(){
+        jQuery("#login-button", scope).unbind("click").click(function(){
 
-          var login = $("#input-login", scope).val();
-          var password = $("#input-password", scope).val();
+          var login = jQuery("#input-login", scope).val();
+          var password = jQuery("#input-password", scope).val();
     
           if(login.length > 0 && password.length > 0)
           {
-            $("#login-loader", scope).addClass('pacman-loader');
+            jQuery("#login-loader", scope).addClass('pacman-loader');
             STATME.API().login(login, password, function(data){
               STATME.UTILS.ALERT.remove(scope);
-              $("#login-loader", scope).removeClass('pacman-loader');
+              jQuery("#login-loader", scope).removeClass('pacman-loader');
               if(data.metadatas.error)
               {
-                  var error = STATME.UTILS.ALERT.error('Bad Login or Password is empty', 'Error !');
-                  $(".content", scope).prepend(error);
+                var error = STATME.UTILS.ALERT.error('Bad Login or Password is empty', 'Error !');
+                jQuery(".content", scope).prepend(error);
+              }
+              else
+              {
+                //store token change page
+                jQuery.mobile.changePage(jQuery("#page-friends-home"));
               }
             });
           }
           else
           {
             var warning = STATME.UTILS.ALERT.warning('Your Login or Password is empty', 'Remark !');
-            $(".content", scope).prepend(warning);
+            jQuery(".content", scope).prepend(warning);
           }
+        });
       });
-    });
     </script>
   </head>
   <body>
 
     <!-- LOGIN PAGE -->
-    <div id="page-login" data-role="login">
+    <div id="page-login" data-role="page">
       <div data-role="header">
         <h1>STATME</h1>
       </div>
       <div class="content" data-role="content">	
-        <input id="input-login" class="full-width" type="text" placeholder="Username Or Email">
-        <input id="input-password" class="full-width" type="password" placeholder="Password">
-        <button id="login-button" type="button" class="btn-primary btn-large full-width">GO</button>
-        <span id='login-loader' class="help-inline"></span>
+        <div class="well">
+          <input id="input-login" class="full-width" type="text" placeholder="Username Or Email">
+          <input id="input-password" class="full-width" type="password" placeholder="Password">
+          <button id="login-button" type="button" class="btn-primary btn-large full-width">GO</button>
+          <span id='login-loader' class="help-inline"></span>
+        </div>
+
       </div>
     </div>
 
     <!-- FRIEND HOME PAGE -->
-    <div id="page-friends-home" data-role="friends-home">
+    <div id="page-friends-home" data-role="page">
       <div data-role="header">
         <h1>STATME</h1>
       </div>
