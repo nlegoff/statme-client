@@ -1,8 +1,23 @@
-@CHARSET "ISO-8859-1";
-.tdFooterMyFriendsCommentDisplayFalse{
-	display:none;
+.statme-full-width{
+  width:100%;
 }
 
-.tdFooterMyFriendsCommentDisplayTrue{
-	display:block;
+.pacman-loader{
+  background: url('/img/ajax-loader-pacman.gif') no-repeat center center;
+}
+
+#login-loader{
+  height: 40px;
+  width: 40px;
+  margin:0;
+}
+
+#statme-mask{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.2);
+  display:none;
 }
