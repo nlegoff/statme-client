@@ -34,7 +34,7 @@
               jQuery("#login-loader", scope).removeClass('pacman-loader');
               if(data.metadatas.error)
               {
-                var error = STATME.UTILS.ALERT.error('Bad Login or Password is empty', 'Error !');
+                var error = STATME.UTILS.ALERT.error('Bad Login or Password', 'Error !');
                 jQuery(".content", scope).prepend(error);
               }
               else
